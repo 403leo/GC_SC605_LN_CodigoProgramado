@@ -1,7 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int PuntosTotales {get; private set;}
 
 	private int vidas = 3;
+
 
     private void Awake()
     {
@@ -31,15 +34,14 @@ public class GameManager : MonoBehaviour
 		hud.ActualizarPuntos(PuntosTotales);
     }
 
+
 	public void PerderVida() {
 		vidas -= 1;
-
 		if(vidas == 0)
 		{
 			// Reiniciamos el nivel.
 			SceneManager.LoadScene(0);
 		}
-
 		hud.DesactivarVida(vidas);
 	}
 
