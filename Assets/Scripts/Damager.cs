@@ -2,10 +2,13 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Gamekit2D
+namespace GameManager
 {
+    
     public class Damager : MonoBehaviour
     {
-       
-}
+        
+
+    }
+    
 }
