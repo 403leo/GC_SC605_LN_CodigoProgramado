@@ -8,7 +8,7 @@ public class MenuInicial : MonoBehaviour
     // Start is called before the first frame update
     public void Start()
     {
-        //SceneManagement.LoadScene("SC Demo Scene - Village Props");
+        //SceneManagement.LoadScene(SceneManagement.GetActiveScene() + 1);
     }
 
     // Update is called once per frame
