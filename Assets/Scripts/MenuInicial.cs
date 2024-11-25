@@ -19,5 +19,13 @@ public class MenuInicial : MonoBehaviour
         Debug.Log("Salir....");
         Application.Quit();
     }
+
+    // Update is called once per frame
+    public void BotonVolverOpciones()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+
 }
 
