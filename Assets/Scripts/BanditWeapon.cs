@@ -12,18 +12,26 @@ public class BanditWeapon : MonoBehaviour
 	public float attackRange = 1f;
 	public LayerMask attackMask;
 
-	public void Attack()
-	{
-		Vector3 pos = transform.position;
-		pos += transform.right * attackOffset.x;
-		pos += transform.up * attackOffset.y;
+	private GameManager gameManager;
 
-		Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-		if (colInfo != null)
-		{
-			colInfo.GetComponent<GameManager>().PerderVida();
-		}
-	}
+    private void Start()
+    {
+        // Asegúrate de que el GameManager esté correctamente asignado.
+        gameManager = FindObjectOfType<GameManager>();
+    }
+
+    public void Attack()
+    {
+        if (gameManager != null)
+        {
+            gameManager.PerderVida();
+        }
+        else
+        {
+            Debug.LogError("GameManager no encontrado.");
+        }
+    }
+
 
 	/*
 	public void EnragedAttack()
@@ -48,5 +56,15 @@ public class BanditWeapon : MonoBehaviour
 
 		Gizmos.DrawWireSphere(pos, attackRange);
 	}
+	
+
+	private void OnTriggerEnter(Collider other)
+{
+    if (other.CompareTag("Player"))
+    {
+        Attack(); // Llama a Attack cuando el jugador entre en el rango del arma.
+    }
+}
+
 	
 }
