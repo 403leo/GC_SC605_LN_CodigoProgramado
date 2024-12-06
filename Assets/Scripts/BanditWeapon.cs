@@ -58,13 +58,14 @@ public class BanditWeapon : MonoBehaviour
 	}
 	
 
-	private void OnTriggerEnter(Collider other)
-{
-    if (other.CompareTag("Player"))
-    {
-        Attack(); // Llama a Attack cuando el jugador entre en el rango del arma.
-    }
-}
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.CompareTag("Player"))
+		{
+			Attack();
+		}
+	}
+
 
 	
 }

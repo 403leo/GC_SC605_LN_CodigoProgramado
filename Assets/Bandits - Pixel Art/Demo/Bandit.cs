@@ -17,6 +17,7 @@ public class Bandit : MonoBehaviour {
 
     private void Update()
     {
+        
         // Mirar al jugador
         LookAtPlayer();
 
@@ -43,11 +44,12 @@ public class Bandit : MonoBehaviour {
 
     private void AttackPlayer()
     {
-        if (weapon != null)
+        if (weapon != null && Vector2.Distance(transform.position, player.position) <= attackRange)
         {
             weapon.Attack();
         }
     }
+
 
 
     public void LookAtPlayer()

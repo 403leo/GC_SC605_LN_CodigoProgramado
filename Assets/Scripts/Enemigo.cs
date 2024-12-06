@@ -10,9 +10,9 @@ public class Enemigo : MonoBehaviour
 	}
     private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.CompareTag("Player")) {
-            Debug.Log("Jugador golpeado");
-            m_animator.Play("HeroKnight_Hurt");
-            GameManager.Instance.PerderVida();
+                Debug.Log("Jugador golpeado");
+                m_animator.Play("Hurt");
+                GameManager.Instance.PerderVida();
         }
 	}
 }
