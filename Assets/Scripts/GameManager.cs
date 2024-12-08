@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
 
 	private int vidas = 3;
 
+    
+
 	// NUEVOS ATRIBUTOS	
 	/*
 	[Serializable]
@@ -70,7 +72,7 @@ public class GameManager : MonoBehaviour
 		if(vidas == 0)
 		{
 			// Reiniciamos el nivel.
-			SceneManager.LoadScene(0);
+			//SceneManager.LoadScene(0);
 		}
 		/*
 		if ((m_Invulnerable && !ignoreInvincible) || m_CurrentHealth <= 0)
