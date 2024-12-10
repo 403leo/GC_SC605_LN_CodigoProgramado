@@ -5,18 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-/*
-    [SerializedField] private GameObject BotonPausa;
-    [SerializedField] private GameObject MenuPausaPausa;
-    private bool  juegoPausado = false;
-    // Start is called before the first frame update
+    [SerializeField] private GameObject BotonPausa;
+    [SerializeField] private GameObject MenuPausaPausa; // Cambiar este nombre si lo deseas
+    private bool juegoPausado = false;
 
+    // Update is called once per frame
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)){
-            if(juegoPausado){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (juegoPausado)
+            {
                 Reanudar();
-            }else{
+            }
+            else
+            {
                 Pausa();
             }
         }
@@ -27,29 +30,28 @@ public class MenuPausa : MonoBehaviour
         juegoPausado = true;
         Time.timeScale = 0f;
         BotonPausa.SetActive(false);
-        MenuPausa.SetActive(true);
+        MenuPausaPausa.SetActive(true); // Uso del nombre correcto
     }
 
     public void Reanudar()
     {
-juegoPausado = false;
+        juegoPausado = false;
         Time.timeScale = 1f;
         BotonPausa.SetActive(true);
-        MenuPausa.SetActive(false);
+        MenuPausaPausa.SetActive(false); // Uso del nombre correcto
     }
 
-     public void Reiniciar()
+    public void Reiniciar()
     {
         juegoPausado = false;
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-     public void Cerrar()
+    public void Cerrar()
     {
         juegoPausado = false;
         Debug.Log("Cerrando Juego");
         Application.Quit();
     }
-    */
 }

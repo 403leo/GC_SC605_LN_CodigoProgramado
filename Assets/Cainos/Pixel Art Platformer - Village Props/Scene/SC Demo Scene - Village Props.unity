@@ -14842,6 +14842,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ebaccf44c7dcba498ca19edcc3dd554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BotonPausa: {fileID: 0}
+  MenuPausaPausa: {fileID: 0}
 --- !u!4 &1282629574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1049023302621363165, guid: c4728654af6c1b84fb5102e3f29ffb8f, type: 3}
@@ -20507,7 +20509,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -789.5855, y: 561.3867}
+  m_AnchoredPosition: {x: -828, y: 402}
   m_SizeDelta: {x: 212.829, y: 79.227}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1817816656
