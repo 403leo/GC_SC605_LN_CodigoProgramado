@@ -21,17 +21,28 @@ public class BanditWeapon : MonoBehaviour
     }
 
     public void Attack()
-    {
-        if (gameManager != null)
-        {
-            gameManager.PerderVida();
-        }
-        else
-        {
-            Debug.LogError("GameManager no encontrado.");
-        }
-    }
+	{
+		// Busca al jugador y activa su animación de herida
+		/*
+		HeroKnight hero = FindObjectOfType<HeroKnight>();
+		if (hero != null)
+		{
+			hero.ActivarAnimacionHerida();
+		}
+		*/
 
+		// Reduce la vida del jugador usando el GameManager
+		if (gameManager != null)
+		{
+			//gameManager.PerderVida();
+		}
+		else
+		{
+			Debug.LogError("GameManager no encontrado.");
+		}
+	}
+
+	
 
 	/*
 	public void EnragedAttack()
@@ -58,13 +69,33 @@ public class BanditWeapon : MonoBehaviour
 	}
 	
 
-	private void OnTriggerEnter2D(Collider2D other)
+	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.CompareTag("Player"))
+		if (other.gameObject.CompareTag("Player"))
 		{
-			Attack();
+			Debug.Log("Jugador golpeado por jefe");
+
+			// Activar animación de herida en el protagonista
+			HeroKnight hero = other.gameObject.GetComponent<HeroKnight>();
+			if (hero != null)
+			{
+				hero.ActivarAnimacionHerida();
+			}
+
+			// Reducir la vida del jugador usando el GameManager
+			if (GameManager.Instance != null)
+			{
+				GameManager.Instance.PerderVida();
+			}
+			else
+			{
+				Debug.LogError("GameManager no encontrado.");
+			}
 		}
 	}
+
+
+
 
 
 	

@@ -191,4 +191,13 @@ public class HeroKnight : MonoBehaviour {
         }
     }
 
+    public void ActivarAnimacionHerida()
+{
+    if (!m_rolling) // Verifica que no esté rodando
+    {
+        m_animator.SetTrigger("Hurt");
+    }
+}
+
+
 }

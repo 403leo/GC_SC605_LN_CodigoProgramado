@@ -29,11 +29,19 @@ public class Boss_Run : StateMachineBehaviour
 		Vector2 newPos = Vector2.MoveTowards(rb.position, target, speed * Time.fixedDeltaTime);
 		rb.MovePosition(newPos);
 
-		if (Vector2.Distance(player.position, rb.position) <= attackRange )
+		if (Vector2.Distance(player.position, rb.position) <= attackRange)
 		{
-			animator.SetTrigger("Attack");
-			//GameManager.Instance.PerderVida();
+			//animator.SetTrigger("Attack");
+
+			// Causa daño y activa la animación de herida
+			BanditWeapon weapon = animator.GetComponent<BanditWeapon>();
+			if (weapon != null)
+			{
+				animator.SetTrigger("Attack");
+				weapon.Attack();
+			}
 		}
+
 	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

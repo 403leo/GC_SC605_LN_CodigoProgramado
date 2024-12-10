@@ -11,8 +11,13 @@ public class Enemigo : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.CompareTag("Player")) {
                 Debug.Log("Jugador golpeado");
-                m_animator.Play("Hurt");
+                
+                HeroKnight hero = other.gameObject.GetComponent<HeroKnight>();
+                if(hero != null){
+                        hero.ActivarAnimacionHerida();
+                }
+
                 GameManager.Instance.PerderVida();
-        }
-	}
+                }
+    }
 }
