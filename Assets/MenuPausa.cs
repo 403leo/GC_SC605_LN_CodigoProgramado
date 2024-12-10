@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class MenuPausa : MonoBehaviour
 {
-
+/*
     [SerializedField] private GameObject BotonPausa;
     [SerializedField] private GameObject MenuPausaPausa;
     private bool  juegoPausado = false;
@@ -48,7 +48,8 @@ juegoPausado = false;
      public void Cerrar()
     {
         juegoPausado = false;
-        Debug.Log("Cerrando Juego")
+        Debug.Log("Cerrando Juego");
         Application.Quit();
     }
+    */
 }
