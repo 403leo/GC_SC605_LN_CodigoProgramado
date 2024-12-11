@@ -53,5 +53,7 @@ public class MenuPausa : MonoBehaviour
         juegoPausado = false;
         Debug.Log("Cerrando Juego");
         Application.Quit();
+
+        //Para un Buen Commit
     }
 }
