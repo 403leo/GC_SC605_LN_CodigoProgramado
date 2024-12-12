@@ -16,6 +16,9 @@ EditorBuildSettings:
     path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/Escena AGUA.unity
     guid: 7714b60c54863a2499f5270ecfe1e428
   - enabled: 1
+    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/Escena VIENTO.unity
+    guid: 08a16b027ec46224e8e5343534a257be
+  - enabled: 1
     path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/BatallaFinal.unity
     guid: 1dcfc99b621b9194e86c8b9262f6c4e7
   m_configObjects: {}
