@@ -6,22 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/MenuInicial.unity
-    guid: feddac186981355498e828fdcaa09ad9
+    path: Assets/2DGamekit/Scenes/Start.unity
+    guid: 57df1e417250bc247976c2c0dc088efe
   - enabled: 1
-    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/SC Demo Scene
-      - Village Props.unity
-    guid: 104b0d14871d44f4881963af94f49350
+    path: Assets/2DGamekit/Scenes/Zone1.unity
+    guid: a94cb8f134bf81349ad016c79b629e3d
   - enabled: 1
-    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/Escena AGUA.unity
-    guid: 7714b60c54863a2499f5270ecfe1e428
+    path: Assets/2DGamekit/Scenes/Zone2.unity
+    guid: 5436c67e9267f17458b31fcdc20cd20a
   - enabled: 1
-    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/Escena VIENTO.unity
-    guid: 08a16b027ec46224e8e5343534a257be
-  - enabled: 1
-    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/Escena FUEGO.unity
-    guid: 7dec7948dcb99a845bd6e2672d024d6b
-  - enabled: 1
-    path: Assets/Cainos/Pixel Art Platformer - Village Props/Scene/BatallaFinal.unity
-    guid: 1dcfc99b621b9194e86c8b9262f6c4e7
   m_configObjects: {}
